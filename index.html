@@ -4,12 +4,36 @@
 	<title>map</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div id="map">
-
+	<div id="container">
+		<nav>
+			<div>
+				<h2>ShenZhen Locations</h2>
+				<div id ="searchBox">
+					<input 
+						type="text" 
+						value=""
+						placeholder="Station location"/>
+					<button>Filter</button>
+				</div>
+			</div>
+		</nav>
+		<div class="main">
+			<div id="menu">
+				<button class="hamburger">
+					<span>menu</span>
+				</button>
+			</div>
+			<div id="map"></div>	
+		</div>
+		
 	</div>
+	<!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script> -->
 	<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbUCvFRJ7Q68Y1fvtm1eW5zfaQsqT6FTk&callback=initMap">
 	</script>

@@ -6,10 +6,22 @@ function initMap() {
     	zoom: 13
 	});
 
-	var marker;
-	marker = new google.maps.Marker({
-		position: ,
-		map: map,
-		title: ,
-	})
-}
+	// var marker;
+	// marker = new google.maps.Marker({
+	// 	position: ,
+	// 	map: map,
+	// 	title: 
+	// })
+};
+
+let menu = document.querySelector('#menu');
+let nav = document.querySelector('nav');
+let maping = document.querySelector('#map');
+console.log(menu);
+menu.addEventListener('click', function(e) {
+	console.log(e.target);
+	nav.classList.toggle('open');
+	maping.classList.toggle('move');
+
+
+});
