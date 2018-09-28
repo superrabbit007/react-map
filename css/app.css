@@ -7,11 +7,13 @@ html, body {
 
 #container {
 	display: flex;
+	height: 100%;
 }
 
 .main {
 	width: 100%;
 	height: 100%;
+	position: relative;
 }
 
 map.move {
@@ -67,18 +69,17 @@ input {
 
 /* 地图 */
 .map {
-	height: 970px;
-	position: relative;
-	left: 0;
-	bottom: 0px;
+	height: 93%;
+	position: absolute;
 	width: 100%;
 }
 
 /* 汉堡按钮 */
 #menu {
 	width: 100%;
-	height: 70px;
+	height: 7%;
 	background-color: royalblue;
+	position: relative;
 }
 
 .navbar-toggle {
