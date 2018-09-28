@@ -4,7 +4,6 @@
 	<title>map</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -17,23 +16,23 @@
 						type="text" 
 						value=""
 						placeholder="Station location"/>
-					<button>Filter</button>
+					<button class="filter">Filter</button>
 				</div>
 			</div>
 		</nav>
 		<div class="main">
+			<!-- 汉堡符号实现参考链接：https://pewae.com/2014/12/yongcssdaitihanbaofuhao.html -->
 			<div id="menu">
-				<button class="hamburger">
-					<span>menu</span>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
 				</button>
 			</div>
 			<div id="map"></div>	
 		</div>
 		
 	</div>
-	<!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script> -->
 	<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbUCvFRJ7Q68Y1fvtm1eW5zfaQsqT6FTk&callback=initMap">
 	</script>
