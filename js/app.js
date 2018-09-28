@@ -21,7 +21,5 @@ console.log(menu);
 menu.addEventListener('click', function(e) {
 	console.log(e.target);
 	nav.classList.toggle('open');
-	maping.classList.toggle('move');
-
 
 });
