@@ -6,6 +6,7 @@ function initMap() {
     	zoom: 13
 	});
 	var markers = [];
+	var infoWindow= new google.maps.InfoWindow();
 	var bounds = new google.maps.LatLngBounds();
 	var locations=[
 		{title:'深圳红树湾', location:{lat: 22.53056, lng: 113.96632799999998}},
@@ -20,12 +21,25 @@ function initMap() {
 			position: location,
 			map: map,
 			title: title
+			// animation: google.maps.Animation.DROP
 		});
 		bounds.extend(marker.position);
-		return marker;
+		markers.push(marker);
+		marker.addListener('click', function() {
+			// console.log(this);
+			addInfo(this, infoWindow);
+		});
+		// return marker;
 	});
+	console.log(markers);
+
+	function addInfo(marker, infoWindow) {
+		infoWindow.open(map, marker);
+	};
+
 //将边界融入地图中，确保marker的点正常显示
 	map.fitBounds(bounds);
+
 };
 
 let menu = document.querySelector('#menu');
