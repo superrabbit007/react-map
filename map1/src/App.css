@@ -25,7 +25,7 @@ html, body {
 
 /* 侧栏nav*/
 
-nav {
+.nav {
   width: 0;
   background: #ffff;
   border: 1px solid;
@@ -34,7 +34,7 @@ nav {
 
 }
 
-nav.open {
+.navOpen {
   background-color: black;
   width: 500px;
   transform: translate(0,0);

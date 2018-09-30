@@ -3,9 +3,8 @@ import './App.css';
 
 class Menu extends  Component {
 
-
-	showNav() {
-		console.log('test showNav');
+	showNav(props) {
+		this.props.navChange();
 	}
 
 

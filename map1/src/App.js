@@ -13,15 +13,37 @@ const style = {
   position: 'absolute'
 };
 
+
+
+
+
 class App extends Component {
+  state={
+    showingNav: false
+  }
+
+  showingNav(show) {
+    if(!this.state.showingNav) {
+      this.setState({
+        showingNav: true
+      }) 
+    }else {
+      this.setState({showingNav: false})
+    }
+  }
+
   render() {
+    
     return (
       <div id="container">
-        <Nav />
+        <Nav 
+          navBar={this.state.showingNav}/>
         <div className="main">
-          <Menu/>
+          <Menu
+            navChange={(show)=>this.showingNav(show)}/>
           <div className="map">
-            <MapContainer />
+              <MapContainer
+              />
           </div>
         </div>
       </div>

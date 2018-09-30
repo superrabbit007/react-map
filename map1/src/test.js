@@ -23,3 +23,14 @@
             <Map google={this.props.google} zoom={14} style={style}></Map>
           </div>
         </div>
+
+
+
+        	            // {locations.map((loc,index)=>( 
+	            // 	<Marker	
+	            // 		key={index}
+	            // 		title={loc.title}
+	            // 		position={{lat: 22.53056, lng: 113.96632799999998}}
+	            // 	/>
+	            // 		// onMouseoverMarker={this.onMouseoverMarker}/>
+	            // ))}
