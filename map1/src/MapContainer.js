@@ -8,7 +8,6 @@ const style = {
   height: '100%',
   position: 'absolute'
 };
-
 var locations=[
 		{title:'深圳红树湾', location:{lat: 22.53056, lng: 113.96632799999998}},
 		{title:'欢乐谷', location: {lat: 22.533468, lng: 113.99344819999999}},
@@ -25,25 +24,30 @@ class MapContainer extends Component {
 
 	};
 	render() {
+		var bounds = new this.props.google.maps.LatLngBounds();
+		for (var i = 0; i < locations.length; i++) {
+		  bounds.extend(locations[i].location);
+		}
+
 		return (
-		<Map 
-            google={this.props.google}
-            zoom={14}
-            style={style}
-            center={{
-              lat: 22.543096, 
-              lng: 114.05786499999999
-            }}>
-            {locations.map(loc=>{
+			<Map 
+	            google={this.props.google}
+	            zoom={14}
+	            style={style}
+	            initialCenter={{
+	              lat: 22.543096, 
+	              lng: 114.05786499999999
+	            }}
+	            bounds={bounds}>
+	            {locations.map((loc, index)=>( 
+	            	<Marker	
+	            		key={index}
+	            		title={loc.title}
+	            		position={loc.location}
+	            		onMouseoverMarker={this.onMouseoverMarker}/>
+	            ))}
 
-            	<Marker
-            		
-            		title={loc.title}
-            		position={loc.location}
-            		onMouseoverMarker={this.onMouseoverMarker}/>
-            })}
-
-        </Map>
+	        </Map>
 		)
 		
 	}
@@ -52,3 +56,4 @@ class MapContainer extends Component {
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyAbUCvFRJ7Q68Y1fvtm1eW5zfaQsqT6FTk'
 })(MapContainer);
+// export default MapContainer;
