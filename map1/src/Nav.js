@@ -7,7 +7,7 @@ class Nav extends Component {
 			<nav className="navbar">
 				<div>
 					<h2>ShenZhen Locations</h2>
-					<div className="searchBox">
+					<div id="searchBox">
 						<input 
 							type="text" 
 							placeholder="Station location"/>

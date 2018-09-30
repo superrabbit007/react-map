@@ -5,28 +5,31 @@ import {GoogleApiWrapper, Map} from 'google-maps-react';
 import Menu from './Menu';
 import Main from './Main';
 import Nav from './Nav';
+import MapContainer from './MapContainer';
 
 const style = {  
   width: '100%',
   height: '100%',
-  position: 'relative'
+  position: 'absolute'
 };
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div id="container">
         <Nav />
         <div className="main">
-          <Menu />
-          <Map google={this.props.google} zoom={14} style={style}></Map>
+          <Menu/>
+          <div className="map">
+            <MapContainer />
+          </div>
         </div>
       </div>
     );
   }
 }
 
+
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyAbUCvFRJ7Q68Y1fvtm1eW5zfaQsqT6FTk'
 })(App);
-

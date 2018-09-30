@@ -5,9 +5,10 @@ html, body {
   padding: 0;
 }
 
-.container {
+#container {
   display: flex;
   height: 100%;
+  width: 100%;
 }
 
 .main {
@@ -16,11 +17,15 @@ html, body {
   position: relative;
 }
 
+#root > div {
+  height: 100%;
+  width: 100%;
+}
 
 
 /* 侧栏nav*/
 
-.navbar {
+nav {
   width: 0;
   background: #ffff;
   border: 1px solid;
@@ -29,7 +34,7 @@ html, body {
 
 }
 
-.navbar.open {
+nav.open {
   background-color: black;
   width: 500px;
   transform: translate(0,0);
@@ -40,11 +45,11 @@ h2 {
   color: grey;
 }
 
-h2, .searchBox {
+h2, #searchBox {
   text-align: center;
 }
 
-.searchBox {
+#searchBox {
   margin: 50px 5px;
 }
 
@@ -72,7 +77,7 @@ input {
 }
 
 /* 汉堡按钮 */
-.menu {
+#menu {
   width: 100%;
   height: 8%;
   background-color: royalblue;
